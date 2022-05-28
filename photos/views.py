@@ -5,7 +5,7 @@ from django.shortcuts import render
 def image(request):
     return render(request, 'photos/image.html')
 
-def viewPhoto(request):
+def viewPhoto(request, pk):
     return render(request, 'photos/photo.html')
 
 def addPhoto(request):
