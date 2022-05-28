@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Category, Photo
 
 
@@ -19,5 +19,6 @@ def addPhoto(request):
         new_photo = Photo(description=request.POST['description'], image=request.FILES['image'], category=Category.objects.get(id=request.POST['category']))
         new_photo.save()
         return render(request, 'index.html', {'categories': categories})
+        
     context = {'categories': categories}
     return render(request, 'add.html', context)
