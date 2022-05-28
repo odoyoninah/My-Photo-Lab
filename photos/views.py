@@ -15,5 +15,9 @@ def viewPhoto(request, pk):
 
 def addPhoto(request):
     categories = Category.objects.all()
+    if request.method == 'POST':
+        new_photo = Photo(description=request.POST['description'], image=request.FILES['image'], category=Category.objects.get(id=request.POST['category']))
+        new_photo.save()
+        return render(request, 'index.html', {'categories': categories})
     context = {'categories': categories}
     return render(request, 'add.html', context)
