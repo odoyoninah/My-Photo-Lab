@@ -14,8 +14,8 @@
             <div class="col">
                 <a href="{% url 'index' %}" class="btn btn-dark my-3">Go back</a>
                 <div style="height: 90vh;">
-                    <img style ="max-width: 100%; max-height: 100%;"src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Card image cap">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod, accusamus velit vitae distinctio quam maiores facere amet cumque </p>
+                    <img style ="max-width: 100%; max-height: 100%;"src="{{ photo.image.url }}" alt="">
+                    <p>{{photo.description}}</p>
                 </div>
             </div>
 
