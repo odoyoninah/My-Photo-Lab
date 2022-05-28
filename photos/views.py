@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'photos/index.html')
+    return render(request, 'index.html')
 
-def viewPhoto(request, pk):
-    return render(request, 'photos/photo.html')
+def viewPhoto(request):
+    return render(request, 'photo.html')
 
 def addPhoto(request):
-    return render(request, 'photos/form.html')
+    return render(request, 'add.html')
