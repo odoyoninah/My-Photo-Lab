@@ -5,7 +5,8 @@ from .models import Category, Photo
 
 def index(request):
     categories = Category.objects.all()
-    context = {'categories': categories}
+    photos = Photo.objects.all()
+    context = {'categories': categories, 'photos': photos}
     return render(request, 'index.html', context)
 
 def viewPhoto(request, pk):
