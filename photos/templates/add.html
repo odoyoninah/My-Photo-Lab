@@ -10,6 +10,7 @@
 <body class="m-5">
     <div class="container justify-content-center">
                 <a href="{% url 'index' %}" class="btn btn-dark my-3">Go back</a>
+                {% csrf_token %}
                 <form action="{% url 'add' %}" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="category">Category</label>
