@@ -5,6 +5,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    def save_category(self):
+        self.save()
 
 class Photo(models.Model):
     description = models.TextField()
@@ -13,3 +15,5 @@ class Photo(models.Model):
 
     def __str__(self):
         return self.description
+    def save_photo(self):
+        self.save()
