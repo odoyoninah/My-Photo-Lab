@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import django_heroku
 import dj_database_url
-from decouple import config,Csv
+from decouple import config
 
 
 import photos
@@ -32,13 +32,10 @@ SECRET_KEY = 'django-insecure-6!6!k9fb&2opotkvj9%dxg^xcq4job%7qreeffrp6m0v_np+-2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ALLOWED_HOSTS=[]
 SECRET_KEY = config('SECRET_KEY')
 MODE=config("MODE", default="dev")
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
  
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 
@@ -138,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
